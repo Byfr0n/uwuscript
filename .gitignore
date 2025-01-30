@@ -40,4 +40,4 @@ luac.out
 *.hex
 
 # website
-website
+website/
