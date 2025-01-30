@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uwu menu - not skidded!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8c00ff;
+            padding: 1em;
+            width: 100%;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 2em;
+        }
+        .content {
+            max-width: 800px;
+            padding: 1em;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5em;
+            margin: 1em 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin: 0 0 0.5em;
+            font-size: 1.5em;
+        }
+        .btn {
+            background-color: #ff99cc;
+            color: #fff;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1em;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ff80b2;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>uwu menu</h1>
+    <p>😎</p>
+</header>
+
+<div class="content">
+    <div class="card">
+        <h2>about uwu script</h2>
+        <p>we're the worst and lowkey best script out there. supporting your favorite games!</p>
+    </div>
+    
+    <div class="card">
+        <h2>features</h2>
+        <ul>
+            <li>pro ui</li>
+            <li>it works on ur xeno paste</li>
+            <li>silly developer</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h2>use</h2>
+        <p>click the button below to copy the script to ur clipboard</p>
+        <button class="btn" onclick="copyScript()">:)</button>
+    </div>
+</div>
+
+<script>
+    function copyScript() {
+        const scriptText = `
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Byfr0n/uwudumper/refs/heads/main/main.txt"))()
+        `;
+        
+        navigator.clipboard.writeText(scriptText).then(() => {
+            alert('script copied to clipboard');
+        }).catch(err => {
+            console.error('failed to copy: ', err);
+        });
+    }
+</script>
+
+</body>
+</html>
