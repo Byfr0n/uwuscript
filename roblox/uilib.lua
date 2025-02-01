@@ -53,14 +53,8 @@ function getcustomhui()
 end
 
 local function gethuiSafe()
-	if pcall(function() return getgenv() end) then
-		if type(getgenv().gethui) == "function" then
-			hasgethui = true
-			return getgenv().gethui()
-		end
-	end
-
-	if type(gethui) == "function" then
+	local success, result = pcall(function() return gethui() end)
+	if success then
 		hasgethui = true
 		return gethui()
 	else
