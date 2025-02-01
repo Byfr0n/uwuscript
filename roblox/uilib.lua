@@ -78,13 +78,13 @@ end
 if hasloadstring then
 	print("✅ loadstring")
 else
-	error("❌ loadstring")
+	print("❌ loadstring")
 end
 
 if hasgethui then
 	print("✅ gethui")
 else
-	error("❌ gethui")
+	print("❌ gethui")
 end
 
 for _, v in next, gethuiSafe():GetChildren() do
